@@ -1,5 +1,4 @@
-import styles from '../styles/Home.module.css';
-import HomeSection2 from '@/components/HomeSection2';
+import HomeSection from "@/components/HomeSection";
 
 export default function Home() {
   return (
@@ -12,8 +11,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Second Section */}
-      <HomeSection2 />
+      <HomeSection />
     </>
   );
 }

@@ -6,7 +6,8 @@ export default function Header() {
       <nav style={{ display: "flex", gap: "2rem" }}>
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
-        <Link href="/gallery">Gallery</Link>
+        <Link href="/episodes">Episodes</Link>
+        <Link href="/events">Events</Link>
       </nav>
     </header>
   );
