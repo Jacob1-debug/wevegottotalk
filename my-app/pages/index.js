@@ -14,7 +14,7 @@ export default function Home() {
         />
 
         {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10 z-10 gap-7 md:gap-20 w-full mt-10 ">
+        <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10 gap-7 md:gap-20 w-full mt-10 ">
           
           {/* Text Block with Animation */}
           <motion.div
