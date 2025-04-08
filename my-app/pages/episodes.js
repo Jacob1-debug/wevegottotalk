@@ -40,8 +40,8 @@ export default function Episodes() {
           {/* Episodes Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 w-full max-w-6xl">
             {[
-              { title: "Episode 1:", img: "/resources/first_episode.png", desc: "Topics" },
-              { title: "Episode 2:", img: "/resources/episode_1.png", desc: "Topics" },
+              { title: "Episode 1:", img: "/resources/first_episode.png", desc: "From toddler tantrums to tequila" },
+              { title: "Episode 2:", img: "/resources/episode_1.png", desc: "Relationships" },
               {
                 title: "Episode 3:",
                 img: "/resources/episode_1.png",
