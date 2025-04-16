@@ -19,14 +19,14 @@ export default function Footer() {
 
         {/* Column 2: Navigation */}
         <div className="text-sm">
-          <h3 className="text-lg font-semibold mb-3 text-[#910068]">Explore</h3>
-          <ul className="space-y-2">
-            <li><a href="/" className="hover:text-[#910068] transition">Home</a></li>
-            <li><a href="/about" className="hover:text-[#910068] transition">About</a></li>
-            <li><a href="/episodes" className="hover:text-[#910068] transition">Episodes</a></li>
-            <li><a href="/events" className="hover:text-[#910068] transition">Events</a></li>
-          </ul>
-        </div>
+        <h3 className="text-lg font-semibold mb-3 text-[#910068]">Explore</h3>
+        <ul className="flex flex-wrap gap-4">
+          <li><a href="/" className="hover:text-[#910068] transition">Home</a></li>
+          <li><a href="/about" className="hover:text-[#910068] transition">About</a></li>
+          <li><a href="/episodes" className="hover:text-[#910068] transition">Episodes</a></li>
+          <li><a href="/events" className="hover:text-[#910068] transition">Events</a></li>
+        </ul>
+      </div>
 
         {/* Column 3: Social + Call to Action */}
         <div className="text-sm md:text-right">
@@ -47,7 +47,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Line */}
-      <div className="border-t border-gray-200 mt-10 pt-4 text-center text-xs text-gray-600">
+      <div className="border-t border-gray-200 mt-2 pt-4 text-center text-xs text-gray-600">
         © {new Date().getFullYear()} WeHaveGotTalk. All rights reserved.
       </div>
     </footer>
