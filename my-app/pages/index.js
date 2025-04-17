@@ -1,4 +1,5 @@
 import HomeSection2 from '@/components/HomeSection2';
+import Socials from "@/components/Socials"
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -63,8 +64,7 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-
-      {/* Section 2 */}
+      <Socials/>
       <HomeSection2 />
     </>
   );
