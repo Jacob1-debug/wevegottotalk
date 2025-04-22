@@ -19,7 +19,7 @@ function GallerySlider() {
       ];
         const [selectedImage, setSelectedImage] = useState(null);
 
-  return <div>
+  return <div className=' mt-20'>
     
         {/* Gallery Title */}
         <motion.h2
