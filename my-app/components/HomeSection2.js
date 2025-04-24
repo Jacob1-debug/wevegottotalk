@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import GallerySlider from "./GallerySlider"
+import Anna from "../public/resources/Anna.png"
+import Elisha from "../public/resources/elisha.png"
 
 export default function HomeSection2() {
   return (
@@ -29,19 +31,19 @@ export default function HomeSection2() {
           >
             <div className="flex flex-col md:flex-row items-center gap-8">
               <Image
-                src="/resources/Anna.png"
+                src={Anna}
                 alt="Anna"
                 width={160}
                 height={160}
                 className="rounded-full border-4 border-pink-200 flex-shrink-0"
               />
-              {/* Divider Line - Pink Gradient */}
               <div className="hidden md:block h-64 w-0.5 bg-gradient-to-b from-pink-300 to-pink-100 mx-4"></div>
+              {/* Divider Line - Pink Gradient */}
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-800">
                   Anna is the voice of calm in the chaos.
                 </h3>
-                <p className="text-gray-700 mb-4 leading-relaxed">
+                <p className="text-gray-900 mb-4 leading-relaxed">
                   Hi everyone, my name is Anna Siveter and I am the cohost of we have got to talk. I was born
                   and raised in New Jersey. I am first generation American from Italian descent, my parents came
                   to America from Italy through Ellis Island over 60 years ago. I currently live in Buck County
@@ -68,6 +70,7 @@ export default function HomeSection2() {
                     Fun Fact: Anna has a secret love for organizing pantries and watching reality TV with zero guilt.
                   </label>
                 </div>
+
               </div>
             </div>
           </motion.div>
@@ -81,7 +84,7 @@ export default function HomeSection2() {
           >
             <div className="flex flex-col md:flex-row items-center gap-8 md:flex-row-reverse">
               <Image
-                src="/resources/elisha.png"
+                src={Elisha}
                 alt="Elisha"
                 width={160}
                 height={160}
@@ -93,7 +96,7 @@ export default function HomeSection2() {
                 <h3 className="text-2xl font-bold mb-4 text-gray-800">
                   Elisha is the friend who always says what you're thinking — out loud.
                 </h3>
-                <p className="text-gray-700 mb-4 leading-relaxed">
+                <p className="text-gray-900 mb-4 leading-relaxed">
                   Elisha grew up in a small town in Pennsylvania called Newtown Tripoli. She grew up on a farm,
                   very simple life raised by her father and three brothers. Elisha moved to Philadelphia
                   area and then Bucks County post college. She has enjoyed a successful career in college
