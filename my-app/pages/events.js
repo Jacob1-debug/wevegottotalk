@@ -6,11 +6,21 @@ export default function Events() {
   return (
     <section className="relative w-full min-h-screen overflow-hidden font-[Playfair_Display]">
       {/* Background */}
-      <img
-        src="/events_1.svg"
-        alt="Decorative Background"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      />
+      <div
+        onClick={() =>
+          window.open(
+            "https://www.instagram.com/s/aGlnaGxpZ2h0OjE4Mzc0OTcyNjE0MTA5MTU5?igsh=emI4OXd4bGt5c2Rn",
+            "_blank"
+          )
+        }
+        className="cursor-pointer"
+      >
+        <img
+          src="/events_1.svg"
+          alt="Decorative Background"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-16 py-16 gap-10 mt-10">

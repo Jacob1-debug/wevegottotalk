@@ -1,13 +1,31 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { sanityClient } from "@/lib/sanity";
 import { motion } from "framer-motion";
 
-export default function Episodes() {
+// Fetch videos at build time
+export async function getStaticProps() {
+  const query = `*[_type == "video"] | order(_createdAt desc){
+    _id,
+    title,
+    description,
+    "thumbnailUrl": thumbnail.asset->url,
+    "videoUrl": videoFile.asset->url
+  }`;
+  const videos = await sanityClient.fetch(query);
+
+  return {
+    props: {
+      videos,
+    },
+    revalidate: 60, 
+  };
+}
+
+export default function Episodes({ videos }) {
   return (
     <>
-      {/* Optional: <Header /> */}
-
       <section className="relative min-h-screen w-full text-white font-['Playfair_Display']">
         {/* Background SVG */}
         <img
@@ -27,7 +45,6 @@ export default function Episodes() {
             Some of our Episodes
           </motion.h2>
 
-          {/* Description */}
           <motion.p
             className="text-lg md:text-xl max-w-3xl mb-16 text-[#ffeef5]"
             initial={{ opacity: 0 }}
@@ -37,24 +54,11 @@ export default function Episodes() {
             Join Anna and Elisha as they talk about life, laughter, and learning. Dive into stories from real people, wild conversations, and unfiltered moments. It’s the podcast you didn’t know you needed.
           </motion.p>
 
-          {/* Episodes Grid */}
+          {/* Episodes Grid from Sanity */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 w-full max-w-6xl">
-            {[
-              { title: "Episode 1:", img: "/resources/first_episode.png", desc: "From toddler tantrums to tequila" },
-              { title: "Episode 2:", img: "/resources/episode_1.png", desc: "Relationships" },
-              {
-                title: "Episode 3:",
-                img: "/resources/episode_1.png",
-                desc: "Behind the mic moments",
-              },
-              {
-                title: "Episode 4:",
-                img: "/resources/episode_2.png",
-                desc: "Empowered conversations",
-              },
-            ].map((ep, i) => (
+            {videos.map((ep, i) => (
               <motion.div
-                key={i}
+                key={ep._id}
                 className="space-y-3"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -62,16 +66,19 @@ export default function Episodes() {
                 transition={{ delay: i * 0.2 }}
               >
                 <h3 className="text-xl text-white font-semibold">{ep.title}</h3>
-                {ep.img && (
-                  <Image
-                    src={ep.img}
-                    alt={ep.title}
-                    width={200}
-                    height={200}
-                    className="mx-auto rounded-xl shadow-lg"
-                  />
+
+                {ep.videoUrl && (
+                  <video
+                    controls
+                    className="mx-auto rounded-xl shadow-lg w-full"
+                    poster={ep.thumbnailUrl}
+                  >
+                    <source src={ep.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 )}
-                <p className="text-[#ffeef5]">{ep.desc}</p>
+
+                <p className="text-[#ffeef5]">{ep.description}</p>
               </motion.div>
             ))}
           </div>
@@ -90,8 +97,6 @@ export default function Episodes() {
           </motion.div>
         </div>
       </section>
-
-      {/* Optional: <Footer /> */}
     </>
   );
 }
