@@ -91,9 +91,15 @@ export default function Episodes({ videos }) {
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            <button className="bg-[#e5e5e5] text-[#910068] font-semibold text-lg px-6 py-2 rounded-full shadow hover:bg-white hover:scale-105 transition-all">
+            <a
+              href="https://open.spotify.com/episode/5uSdR7xGNvCkpBVE2qKFP8"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block bg-[#e5e5e5] text-[#910068] font-semibold text-lg px-6 py-2 rounded-full shadow hover:bg-white hover:scale-105 transition-all"
+            >
               See More episodes!
-            </button>
+            </a>
+
           </motion.div>
         </div>
       </section>

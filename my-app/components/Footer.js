@@ -22,7 +22,7 @@ import {
 		  </div>
   
 		  {/* Column 2: Navigation */}
-		  <div className="text-sm flex flex-col justify-center items-center">
+		  <div className="text-sm flex flex-col md:justify-center md:items-center">
 			<h3 className="text-lg font-semibold mb-3 text-[#910068]">
 			  Explore
 			</h3>
@@ -91,7 +91,7 @@ import {
 		</div>
   
 		{/* Bottom Line */}
-		<div className="border-t border-gray-200 mt-8 pt-4 text-center text-xs text-gray-600">
+		<div className="border-t border-gray-200 mt-4 pt-4 text-center text-xs text-gray-600">
 		  © {new Date().getFullYear()} Wehavegottotalk. All rights reserved.
 		</div>
 	  </footer>

@@ -18,8 +18,16 @@
     --foreground: #ededed;
   }
 }
-body {
+html, body {
   overflow-x: hidden;
   box-sizing: border-box;
 }
 
+/* Hide scrollbar across browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+.scroll-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
