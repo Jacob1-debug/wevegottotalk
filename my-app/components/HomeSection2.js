@@ -1,17 +1,17 @@
-import Image from "next/image"
-import { motion } from "framer-motion"
-import GallerySlider from "./GallerySlider"
-import Anna from "../public/resources/Anna.png"
-import Elisha from "../public/resources/elisha.png"
+import Image from "next/image";
+import { motion } from "framer-motion";
+import GallerySlider from "./GallerySlider";
+import Anna from "../public/resources/Anna.png";
+import Elisha from "../public/resources/elisha.png";
 
 export default function HomeSection2() {
   return (
     <section className="bg-gradient-to-r from-gray-200 via-pink-100 to-white py-16 px-6 font-['Playfair_Display'] overflow-hidden">
       <div className="max-w-4xl mx-auto">
-        
+
         {/* Section Heading */}
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-16"
+          className="text-4xl md:text-5xl font-bold text-center mb-4 text-[#910068]"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -19,9 +19,19 @@ export default function HomeSection2() {
           More About Us – Anna and Elisha
         </motion.h2>
 
+        {/* Catchy Subtitle */}
+        <motion.p
+          className="text-center text-lg text-gray-600 mb-16 max-w-2xl mx-auto font-light"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          Two best friends. Two stories. One passion for life, laughter, and raw conversations. Meet Anna and Elisha.
+        </motion.p>
+
         {/* Vertical Stack Layout */}
-        <div className="space-y-12">
-          
+        <div className="space-y-16">
+
           {/* Anna - Top Block */}
           <motion.div
             className="bg-white p-8 rounded-xl shadow-md"
@@ -37,30 +47,27 @@ export default function HomeSection2() {
                 height={160}
                 className="rounded-full border-4 border-pink-200 flex-shrink-0"
               />
-              <div className="hidden md:block h-64 w-0.5 bg-gradient-to-b from-pink-300 to-pink-100 mx-4"></div>
-              {/* Divider Line - Pink Gradient */}
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">
+          <div className="hidden md:block h-64 w-1.5 bg-gradient-to-b from-pink-300 to-pink-100 mx-4" />
+
+              <div className="space-y-4 text-gray-900 leading-relaxed">
+                <h3 className="text-2xl font-bold mb-2 text-gray-800">
                   Anna is the voice of calm in the chaos.
                 </h3>
-                <p className="text-gray-900 mb-4 leading-relaxed">
-                  Hi everyone, my name is Anna Siveter and I am the cohost of we have got to talk. I was born
-                  and raised in New Jersey. I am first generation American from Italian descent, my parents came
-                  to America from Italy through Ellis Island over 60 years ago. I currently live in Buck County
-                  PA with my amazing husband And four children. I have two sets of twins, twins girls and a set
-                  of boy-girl twins. I know that sounds crazy and I get a lot of reactions from people when I
-                  tell them, but it's all true. We also have a cute toy poodle named Milo. Our family is a
-                  little chaotic and busy, but I wouldn't want it any other way. I'm enjoying this new chapter of
-                  my life as my children are getting older and are in their teenage years and my husband and
-                  I learning to explore and do different things together. I am currently training to be in my
-                  first Fitness competition. I've always had a passion for working out and training, but this is
-                  pushing me to a whole other level. I am so excited for what's to come and I can't wait for
-                  you all to be on this journey with me. I also enjoying dancing, going to the beach,
-                  traveling to new places, and spending time with my friends and family. Creating this podcast
-                  with my best friend, Elisha has been a wonderful journey this far. We have so much to say and
-                  decided doing this podcast would be a great way to get our voices heard.
+                <p>
+                  Hi everyone, my name is <strong>Anna Siveter</strong> and I am the cohost of <em>We Have Got to Talk</em>. Born and raised in New Jersey, I’m a proud first-generation American with deep Italian roots.
                 </p>
-                <div className="flex items-start gap-3">
+                <p>
+                  Today, I live in Bucks County, PA with my wonderful husband and our four incredible kids — yes, two sets of twins! Life is busy and beautiful, filled with love, laughter, and a little bit of chaos, especially with our toy poodle Milo.
+                </p>
+                <p>
+                  Currently, I’m training for my first fitness competition, a challenge that pushes my limits and fuels my passion. Outside of training, I love dancing, the beach, traveling, and living every moment with my family and friends.
+                </p>
+                <p>
+                  Creating this podcast with my best friend Elisha has been a dream come true. It's a space to share real conversations from the heart.
+                </p>
+
+                {/* Fun Fact */}
+                <div className="flex items-start gap-3 hover:scale-105 transition-transform duration-300 mt-4">
                   <input
                     type="checkbox"
                     id="anna-fact"
@@ -70,7 +77,6 @@ export default function HomeSection2() {
                     Fun Fact: Anna has a secret love for organizing pantries and watching reality TV with zero guilt.
                   </label>
                 </div>
-
               </div>
             </div>
           </motion.div>
@@ -90,24 +96,24 @@ export default function HomeSection2() {
                 height={160}
                 className="rounded-full border-4 border-pink-200 flex-shrink-0"
               />
-              {/* Divider Line - Pink Gradient */}
-              <div className="hidden md:block h-64 w-0.5 bg-gradient-to-b from-pink-300 to-pink-100 mx-4"></div>
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">
+              <div className="hidden md:block h-64 w-1.5 bg-gradient-to-b from-pink-300 to-pink-100 mx-4"></div>
+
+              <div className="space-y-4 text-gray-900 leading-relaxed">
+                <h3 className="text-2xl font-bold mb-2 text-gray-800">
                   Elisha is the friend who always says what you're thinking — out loud.
                 </h3>
-                <p className="text-gray-900 mb-4 leading-relaxed">
-                  Elisha grew up in a small town in Pennsylvania called Newtown Tripoli. She grew up on a farm,
-                  very simple life raised by her father and three brothers. Elisha moved to Philadelphia
-                  area and then Bucks County post college. She has enjoyed a successful career in college
-                  admissions and rose to the position of director of admissions prior to retiring when she got
-                  pregnant with her first child. Elisha has three beautiful children, has been married for over
-                  20 years to her college sweetheart, and has spent most of her children's lives as a stay at
-                  home mom. Now that her kids are older, She has begun to teach dance at Newtown Athletic Club
-                  as well as cofounded this podcast with her longtime best friend Anna. This allows her to blend
-                  her family life, and her beautiful friendship and share her unique perspective with the world.
+                <p>
+                  Raised in the small farming town of Newtown Tripoli, Pennsylvania, Elisha grew up with her dad and three brothers, living a beautifully simple life that shaped her strength and spirit.
                 </p>
-                <div className="flex items-start gap-3">
+                <p>
+                  After college, she built a career in college admissions, rising to Director of Admissions, before retiring to raise her family full-time. She’s been married to her college sweetheart for over 20 years and is a proud mom of three.
+                </p>
+                <p>
+                  Today, she teaches dance at the Newtown Athletic Club and co-founded this podcast to give voice to the shared laughter, wisdom, and messiness of life.
+                </p>
+
+                {/* Fun Fact */}
+                <div className="flex items-start gap-3 hover:scale-105 transition-transform duration-300 mt-4">
                   <input
                     type="checkbox"
                     id="elisha-fact"
@@ -122,7 +128,15 @@ export default function HomeSection2() {
           </motion.div>
         </div>
       </div>
-      <GallerySlider/>
+
+      {/* Gallery Section with Soft Entrance */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.4 }}
+      >
+        <GallerySlider />
+      </motion.div>
     </section>
-  )
+  );
 }

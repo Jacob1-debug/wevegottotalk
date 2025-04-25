@@ -1,5 +1,5 @@
 import HomeSection2 from '@/components/HomeSection2';
-import Socials from "@/components/Socials"
+import Socials from "@/components/Socials";
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -44,6 +44,19 @@ export default function Home() {
             >
               🎙️ New episodes coming soon on Spotify. Stay tuned for our juicy intro drop!
             </motion.p>
+
+            {/* Added Creative Button */}
+            <motion.a
+              href="https://open.spotify.com/episode/5uSdR7xGNvCkpBVE2qKFP8"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block mt-6 bg-[#e5e5e5] text-[#910068] font-semibold text-lg px-6 py-3 rounded-full shadow hover:bg-white hover:scale-105 transition-all"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2 }}
+            >
+              🎧 Listen Now
+            </motion.a>
           </motion.div>
 
           {/* Animated Image */}
@@ -62,9 +75,33 @@ export default function Home() {
               priority
             />
           </motion.div>
+          <motion.div
+  className="absolute bottom-6 left-1/2 transform -translate-x-1/2"
+  initial={{ opacity: 0, y: 0 }}
+  animate={{ opacity: 1, y: [0, 10, 0] }}
+  transition={{ repeat: Infinity, duration: 2 }}
+>
+  <a href="#socials" aria-label="Scroll down">
+    <svg
+      className="w-8 h-8 text-yellow-300"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </a>
+</motion.div>
+
         </div>
       </div>
-      <Socials/>
+
+      {/* Social Icons and About Section */}
+      <Socials />
+      <p className="text-center text-gray-600 italic my-6">
+        Follow our journey and join the conversation 🌟
+      </p>
       <HomeSection2 />
     </>
   );

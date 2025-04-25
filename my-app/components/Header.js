@@ -83,7 +83,7 @@ export default function Header() {
           ))}
 
           <a
-            href="https://spotify.com"
+            href="https://open.spotify.com/episode/5uSdR7xGNvCkpBVE2qKFP8"
             target="_blank"
             rel="noreferrer"
             className="bg-white text-[#910068] px-4 py-2 rounded-full font-semibold text-base hover:bg-gray-100 transition"
