@@ -1,11 +1,20 @@
-// pages/events.js
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Events() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden font-[Playfair_Display]">
-      {/* Background */}
+    <section className="relative w-full min-h-screen overflow-hidden font-['Playfair_Display']">
+      
+      {/* Background Image (not clickable) */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <img
+          src="/events_1.svg"
+          alt="Decorative Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Invisible Button on top */}
       <div
         onClick={() =>
           window.open(
@@ -13,18 +22,15 @@ export default function Events() {
             "_blank"
           )
         }
-        className="cursor-pointer"
+        className="absolute inset-0 w-full h-full z-10 cursor-pointer"
       >
-        <img
-          src="/events_1.svg"
-          alt="Decorative Background"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
+        {/* You can even add hover effect if you want */}
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-16 py-16 gap-10 mt-10">
-        {/* Left (Image) - Visible on all screens but smaller on mobile */}
+      {/* Actual Content */}
+      <div className="relative z-20 flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-16 py-16 gap-10 mt-10">
+        
+        {/* Left (Image of the event) */}
         <motion.div
           className="w-full md:w-[40%] flex flex-col items-center"
           initial={{ opacity: 0, x: -50 }}
@@ -38,14 +44,28 @@ export default function Events() {
             height={400}
             className="rounded-2xl shadow-2xl"
           />
-          <p className="text-white text-center mt-4 text-lg leading-snug">
-            Check out our <br /> <strong>Latest Event</strong>
-          </p>
+         <div className="flex flex-col items-center mt-4">
+  {/* Text */}
+  <p className="text-white text-center text-lg leading-snug mb-4">
+    Check out our <br /> <strong>Latest Event</strong>
+  </p>
+
+  {/* Button */}
+  <a
+    href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4Mzc0OTcyNjE0MTA5MTU5?igsh=emI4OXd4bGt5c2Rn"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-block bg-white text-[#910068] font-semibold text-sm md:text-base px-6 py-2 rounded-full shadow-md hover:bg-pink-100 transition-all"
+  >
+    📸 Click here to view the event
+  </a>
+</div>
+
         </motion.div>
 
-        {/* Right (Text) */}
+        {/* Right (Text Content) */}
         <motion.div
-          className=" text-white w-full md:w-[60%] p-6 md:p-10 rounded-2xl backdrop-blur-sm"
+          className="text-white w-full md:w-[60%] p-6 md:p-10 rounded-2xl backdrop-blur-sm bg-white/10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -68,6 +88,7 @@ export default function Events() {
             📷 Follow us on Instagram for behind-the-scenes fun and upcoming events!
           </p>
         </motion.div>
+
       </div>
     </section>
   );
