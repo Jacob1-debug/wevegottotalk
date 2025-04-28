@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import GallerySlider from "./GallerySlider";
-import Anna from "../public/resources/Anna.png";
-import Elisha from "../public/resources/elisha.png";
+import Anna from "../public/resources/Annapic.jpg";
+import Elisha from "../public/resources/Elishapic.jpg";
 
 export default function HomeSection2() {
   return (

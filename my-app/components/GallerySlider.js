@@ -5,10 +5,10 @@ import { useState } from 'react';
 
 function GallerySlider() {
   const galleryImages = [
-    '/images/image1.png',
-    '/images/image2.png',
-    '/images/image3.png',
-    '/images/image6.png',
+    '/images/image11.jpg',
+    '/images/image12.jpg',
+    '/images/image13.jpg',
+    '/images/image14.jpg',
     '/images/image5.png',
     '/images/image6.png',
     '/images/image7.png',
@@ -64,18 +64,6 @@ function GallerySlider() {
     ))}
   </div>
 </div>
-
-
-
-      {/* Decorative Dots */}
-      <div className="flex justify-center mt-6 gap-2">
-        {galleryImages.slice(0, 5).map((_, i) => (
-          <span
-            key={i}
-            className="w-3 h-3 rounded-full bg-[#910068] inline-block"
-          />
-        ))}
-      </div>
 
       {/* Light prompt */}
       <p className="text-center text-sm mt-6 text-gray-500 italic">
