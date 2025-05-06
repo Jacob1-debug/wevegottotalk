@@ -24,7 +24,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link  href="/" className="text-2xl font-bold">Wehavegottotalk</Link>
+        <Link  href="/" className="text-5xl font-bold">Wehavegottotalk</Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 items-center text-lg">
