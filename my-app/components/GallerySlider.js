@@ -40,6 +40,8 @@ function GallerySlider() {
       >
         Snapshots of the laughter, the chaos, and the moments that define us.  
         Because behind every mic, there's a memory worth keeping.
+
+        <p className='font-style: italic'>(Scroll to see more pictures!)</p>
       </motion.p>
 
  {/* Horizontal Scrollable Gallery */}
