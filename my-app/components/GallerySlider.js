@@ -7,7 +7,7 @@ function GallerySlider() {
   const galleryImages = [
     '/images/image11.jpg',
     '/images/image12.jpg',
-    '/images/image13.jpg',
+    '/images/hugging.jpeg',
     '/images/image14.jpg',
     '/images/image5.png',
     '/images/image6.png',

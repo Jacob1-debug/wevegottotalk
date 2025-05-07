@@ -38,7 +38,7 @@ export default function Events() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/resources/events.png"
+            src="/resources/events.jpeg"
             alt="Latest Event"
             width={400}
             height={400}
