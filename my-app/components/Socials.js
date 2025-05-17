@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
 	FaPodcast,
 	FaYoutube,
@@ -6,8 +6,8 @@ import {
 	FaInstagram,
 	FaTiktok,
 	FaSpotify,
-} from "react-icons/fa"
-// import Music from "../public/resources/pic!.jpg"
+	FaFacebook,
+} from "react-icons/fa";
 
 const MediaSection = () => {
 	return (
@@ -15,15 +15,21 @@ const MediaSection = () => {
 			<div className="flex flex-col md:flex-row w-full md:gap-10">
 				{/* Left Card */}
 				<div className="w-full md:w-[55%] bg-gradient-to-br from-gray-100 via-gray-300 to-gray-400 rounded-r-full rounded-l-xl p-6 shadow-lg border border-gray-300 flex flex-col gap-4 items-center justify-between">
+					
 					{/* YouTube Section */}
-					<div className="flex items-center gap-4">
+					<a
+						href="https://youtube.com/@wehavegottotalkwithannaelisha?si=Dfh6xbbP6BsCtw7h"
+						target="_blank"
+						rel="noreferrer"
+						className="flex items-center gap-4 hover:underline"
+					>
 						<div className="bg-white p-3 rounded-full shadow-md border border-gray-200">
 							<FaYoutube className="text-red-600 text-3xl" />
 						</div>
 						<h3 className="text-xl md:text-2xl font-bold text-gray-800">
 							Watch us on YouTube
 						</h3>
-					</div>
+					</a>
 
 					{/* Socials Group */}
 					<div className="flex flex-col gap-4 mt-4">
@@ -59,9 +65,19 @@ const MediaSection = () => {
 								aria-label="Twitter"
 							>
 								<FaTwitter className="text-blue-600 text-2xl" />
-								<span className="text-base text-gray-700">
-									@WeHaveGOTT9116
-								</span>
+							</a>
+						</div>
+
+						{/* Facebook */}
+						<div className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-gray-200 shadow-sm w-fit hover:bg-blue-100 transition mt-4">
+							<a
+								href="https://m.facebook.com/groups/506231078631920/?ref=share&mibextid=wwXIfr"
+								target="_blank"
+								rel="noreferrer"
+								className="flex items-center gap-3"
+								aria-label="Facebook"
+							>
+								<FaFacebook className="text-blue-700 text-2xl" />
 							</a>
 						</div>
 					</div>
@@ -69,6 +85,7 @@ const MediaSection = () => {
 
 				{/* Right Card */}
 				<div className="w-full md:w-[45%] bg-white rounded-l-xl p-6 shadow-lg border border-gray-300 flex flex-col items-center gap-4 mt-6 md:mt-0 text-center">
+					
 					{/* Podcast Header */}
 					<div className="flex items-center gap-4 justify-center">
 						<div className="bg-white p-3 rounded-full shadow-md border border-gray-200">
@@ -82,8 +99,7 @@ const MediaSection = () => {
 					{/* Episode Info */}
 					<div className="flex flex-col gap-2 items-center">
 						<p className="text-base text-gray-700 font-medium">
-							Introductory Episode: Innovator's
-							Episode 1
+							Introductory Episode: Innovator's Episode 1
 						</p>
 						<a
 							href="https://open.spotify.com/episode/5uSdR7xGNvCkpBVE2qKFP8"
@@ -102,7 +118,7 @@ const MediaSection = () => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default MediaSection
+export default MediaSection;

@@ -46,8 +46,21 @@ export default function About() {
             <span className="italic"> laugh, relate, and feel seen.</span>
           </p>
 
+          <p className="text-lg md:text-xl leading-relaxed">
+            And hey — <strong className="text-yellow-300">guys are welcome too!</strong> Whether you're
+            a partner trying to understand the chaos, or just someone who loves honest,
+            hilarious talk — there's a seat at the table for everyone.
+          </p>
+
           <p className="text-lg md:text-xl leading-relaxed text-teal-300 font-medium">
             We also do Business Promotions. <span className="text-white font-bold">Welcome All!</span>
+          </p>
+
+          <p className="text-lg md:text-xl leading-relaxed font-semibold text-pink-200">
+            💌 Got feedback, questions, or want to collaborate? Email us at:{" "}
+            <a href="mailto:wehavegottotalkpodcast@gmail.com" className="underline text-yellow-100">
+              wehavegottotalkpodcast@gmail.com
+            </a>
           </p>
         </motion.div>
       </div>

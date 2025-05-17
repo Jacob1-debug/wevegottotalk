@@ -69,9 +69,8 @@ export default function HomeSection2() {
                 {/* Fun Fact */}
                 <div className="flex items-start gap-3 hover:scale-105 transition-transform duration-300 mt-4">
                   <input
-                    type="checkbox"
                     id="anna-fact"
-                    className="mt-1 w-5 h-5 border-2 border-pink-300 rounded-sm accent-pink-500"
+                    className="mt-1 w-5 h-5 rounded-sm accent-pink-500"
                   />
                   <label htmlFor="anna-fact" className="text-gray-600 italic">
                     Fun Fact: Anna has a secret love for organizing pantries and watching reality TV with zero guilt.
@@ -115,9 +114,8 @@ export default function HomeSection2() {
                 {/* Fun Fact */}
                 <div className="flex items-start gap-3 hover:scale-105 transition-transform duration-300 mt-4">
                   <input
-                    type="checkbox"
                     id="elisha-fact"
-                    className="mt-1 w-5 h-5 border-2 border-pink-300 rounded-sm accent-pink-500"
+                    className="mt-1 w-5 h-5rounded-sm accent-pink-500"
                   />
                   <label htmlFor="elisha-fact" className="text-gray-600 italic">
                     Fun Fact: Elisha once live-commented an entire awards show on Instagram... and gained 100 new followers overnight.

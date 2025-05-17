@@ -6,7 +6,7 @@ import { useState } from 'react';
 function GallerySlider() {
   const galleryImages = [
     '/images/image11.jpg',
-    '/images/image12.jpg',
+   
     '/images/hugging.jpeg',
     '/images/image14.jpg',
     '/images/image5.png',
@@ -40,9 +40,9 @@ function GallerySlider() {
       >
         Snapshots of the laughter, the chaos, and the moments that define us.  
         Because behind every mic, there's a memory worth keeping.
-
-        <p className='font-style: italic'>(Scroll to see more pictures!)</p>
+        <span className="block italic mt-2">(Scroll to see more pictures!)</span>
       </motion.p>
+
 
  {/* Horizontal Scrollable Gallery */}
 <div className="overflow-x-auto w-full px-4">
