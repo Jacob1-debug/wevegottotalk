@@ -94,7 +94,7 @@ export default function Home() {
 							animate={{ opacity: 1 }}
 							transition={{ delay: 2 }}
 						>
-							🎧 New episodes Weekly
+							🎧 Listen now
 						</motion.a>
 					</motion.div>
 

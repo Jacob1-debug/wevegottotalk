@@ -49,7 +49,7 @@ export default function Header() {
             rel="noreferrer"
             className="bg-white text-[#910068] px-4 py-1 rounded-full font-semibold text-base hover:bg-gray-100 transition"
           >
-            🎧 Listen to Podcast
+            🎧 New episodes Weekly
           </a>
         </nav>
 
