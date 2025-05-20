@@ -192,7 +192,7 @@ export default function Episodes({
 									}}
 								>
 									<span className="text-xl font-semibold">
-										Story #{story.id}
+										Clip #{story.id}
 									</span>
 									<span className="text-sm text-pink-100 mt-2">
 										Watch on Instagram →

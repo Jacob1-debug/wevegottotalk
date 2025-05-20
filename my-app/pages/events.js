@@ -122,11 +122,12 @@ export default function Events({ events }) {
               )}
               <h3 className="text-xl font-bold text-center">{event.title}</h3>
               <p className="text-sm text-pink-100 mb-3 italic">
+              <p className="text-sm text-pink-100 mb-3 italic">
                 {new Date(event.date).toLocaleDateString('en-US', {
                   year: 'numeric',
-                  month: 'short',
-                  day: 'numeric',
+                  month: 'long',
                 })}
+              </p>
               </p>
               {event.videoLink && (
                 <a

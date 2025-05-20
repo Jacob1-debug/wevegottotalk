@@ -18,22 +18,23 @@ export default function Home() {
 
 				{/* Photo of Anna & Elisha */}
 				<motion.div
-					className=" absolute top-24 md:top-32 left-1/2 transform -translate-x-1/2 z-10 shadow-xl rounded-full overflow-hidden border-4 border-pink-300 hover:scale-105 transition-transform duration-300"
-					initial={{
-						opacity: 0,
-						scale: 0.8,
-					}}
-					animate={{ opacity: 1, scale: 1 }}
-					transition={{ duration: 1 }}
+				className="hidden md:block absolute top-32 left-1/2 transform -translate-x-1/2 z-0 shadow-xl rounded-full overflow-hidden border-2 border-pink-300 hover:scale-105 transition-transform duration-300"
+				initial={{
+					opacity: 0,
+					scale: 0.8,
+				}}
+				animate={{ opacity: 1, scale: 1 }}
+				transition={{ duration: 1 }}
 				>
-					<Image
-						src="/images/decodded_image.png"
-						alt="Anna and Elisha together"
-						width={160}
-						height={160}
-						className="rounded-full object-cover"
-					/>
+				<Image
+					src="/images/decodded_image.png"
+					alt="Anna and Elisha together"
+					width={160}
+					height={160}
+					className="rounded-full object-cover"
+				/>
 				</motion.div>
+
 
 				{/* Hero Content */}
 				<div className="relative  flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10 gap-7 md:gap-20 w-full mt-10 overflow-hidden max-w-screen-xl">
