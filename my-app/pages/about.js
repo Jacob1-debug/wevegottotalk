@@ -7,16 +7,7 @@ export default function About() {
     <section className="relative w-full min-h-screen overflow-hidden font-['Playfair_Display'] text-white">
       {/* Animated SVG Background */}
 
-      {/* Top-right image only on large screens */}
-      <div className="hidden lg:block lg:absolute top-8 right-8 z-10">
-        <Image
-          src="/images/decodded_image.png"
-          alt="Anna and Elisha together"
-          width={160}
-          height={160}
-          className="rounded-full object-cover shadow-lg border-4 border-white"
-        />
-      </div>
+    
 
       {/* Overlay Content */}
       <div className="relative z-10 flex items-center justify-center px-6 py-20 md:py-32 text-center">
