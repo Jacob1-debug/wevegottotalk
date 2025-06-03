@@ -1,14 +1,22 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
+import '../public/images/decodded_image.png'
 
 export default function About() {
   return (
     <section className="relative w-full min-h-screen overflow-hidden font-['Playfair_Display'] text-white">
       {/* Animated SVG Background */}
-      <img
-        src="/animated.svg"
-        alt="Animated Background"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      />
+
+      {/* Top-right image only on large screens */}
+      <div className="hidden lg:block lg:absolute top-8 right-8 z-10">
+        <Image
+          src="/images/decodded_image.png"
+          alt="Anna and Elisha together"
+          width={160}
+          height={160}
+          className="rounded-full object-cover shadow-lg border-4 border-white"
+        />
+      </div>
 
       {/* Overlay Content */}
       <div className="relative z-10 flex items-center justify-center px-6 py-20 md:py-32 text-center">
@@ -18,7 +26,23 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-yellow-200 mb-8">About Us</h1>
+                {/* About Us Title with Image */}
+      <div className="flex items-center justify-center gap-6 mb-8 flex-wrap lg:flex-nowrap">
+        <h1 className="text-4xl md:text-5xl font-bold text-yellow-200">
+          About Us
+        </h1>
+        {/* Image next to title (visible only on large screens) */}
+        <div className="hidden lg:block">
+          <Image
+            src="/images/decodded_image.png"
+            alt="Anna and Elisha together"
+            width={100}
+            height={100}
+            className="rounded-full object-cover border-4 border-white shadow-md"
+          />
+        </div>
+      </div>
+
 
           <p className="text-lg md:text-xl leading-relaxed font-semibold">
             Welcome to <span className="text-pink-300">WeHaveGotTalk</span> —
@@ -58,8 +82,8 @@ export default function About() {
 
           <p className="text-lg md:text-xl leading-relaxed font-semibold text-pink-200">
             💌 Got feedback, questions, or want to collaborate? Email us at:{" "}
-            <a href="mailto:wehavegottotalkpodcast@gmail.com" className="underline text-yellow-100">
-              wehavegottotalkpodcast@gmail.com
+            <a href="mailto:wehavegottotalk@gmail.com" className="underline text-yellow-100">
+              wehavegottotalk@gmail.com
             </a>
           </p>
         </motion.div>

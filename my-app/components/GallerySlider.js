@@ -2,11 +2,14 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Dialog } from '@headlessui/react';
 import { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 function GallerySlider() {
   const galleryImages = [
-    '/images/image11.jpg',
-   
     '/images/hugging.jpeg',
     '/images/image14.jpg',
     '/images/image5.png',
@@ -20,10 +23,10 @@ function GallerySlider() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section className="mt-24 px-4 py-12 bg-gradient-to-b from-white to-pink-50">
+    <section className="mt-24 px-4 py-16 bg-gradient-to-b from-white to-pink-50">
       {/* Section Title */}
       <motion.h2
-        className="text-4xl md:text-5xl font-bold text-center text-[#910068] mb-4 font-['Playfair_Display']"
+        className="text-5xl md:text-6xl font-extrabold text-center text-[#910068] mb-6 font-['Playfair_Display']"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -33,44 +36,49 @@ function GallerySlider() {
 
       {/* Catchy Subheading */}
       <motion.p
-        className="text-center text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-10 font-light"
+        className="text-center text-xl md:text-2xl text-gray-800 max-w-3xl mx-auto mb-12 font-medium"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
       >
         Snapshots of the laughter, the chaos, and the moments that define us.  
         Because behind every mic, there's a memory worth keeping.
-        <span className="block italic mt-2">(Scroll to see more pictures!)</span>
+        <span className="block italic mt-2 text-pink-600">(Swipe to see more pictures!)</span>
       </motion.p>
 
-
- {/* Horizontal Scrollable Gallery */}
-<div className="overflow-x-auto w-full px-4">
-  <div className="flex gap-6 pb-2 max-w-full">
-    {galleryImages.map((src, index) => (
-      <motion.div
-        key={index}
-        className="relative flex-shrink-0 w-56 h-56 rounded-xl shadow-md overflow-hidden cursor-pointer"
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.4, delay: index * 0.05 }}
-        onClick={() => setSelectedImage(src)}
+      {/* Swiper Carousel */}
+      <Swiper
+        modules={[Navigation, Pagination]}
+        navigation
+        pagination={{ clickable: true }}
+        spaceBetween={24}
+        slidesPerView={1.2}
+        breakpoints={{
+          640: { slidesPerView: 1.5 },
+          768: { slidesPerView: 2.5 },
+          1024: { slidesPerView: 3.5 },
+        }}
+        className="px-2 pb-10"
       >
-        <Image
-          src={src}
-          alt={`Gallery ${index + 1}`}
-          fill
-          className="object-cover transition-transform duration-500 hover:scale-105"
-        />
-      </motion.div>
-    ))}
-  </div>
-</div>
-
-      {/* Light prompt */}
-      <p className="text-center text-sm mt-6 text-gray-500 italic">
-        Click on any photo to view it full screen
-      </p>
+        {galleryImages.map((src, index) => (
+          <SwiperSlide key={index}>
+            <motion.div
+              className="relative h-80 rounded-2xl shadow-xl overflow-hidden cursor-pointer border-4 border-pink-200"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              onClick={() => setSelectedImage(src)}
+            >
+              <Image
+                src={src}
+                alt={`Gallery ${index + 1}`}
+                fill
+                className="object-cover transition-transform duration-500 hover:scale-110"
+              />
+            </motion.div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       {/* Modal Lightbox */}
       <Dialog
@@ -78,18 +86,18 @@ function GallerySlider() {
         onClose={() => setSelectedImage(null)}
         className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center"
       >
-        <Dialog.Panel className="max-w-4xl w-full mx-4">
+        <Dialog.Panel className="max-w-5xl w-full mx-4">
           {selectedImage && (
-            <div className="relative w-full h-[80vh]">
+            <div className="relative w-full h-[85vh]">
               <Image
                 src={selectedImage}
                 alt="Full View"
                 fill
-                className="object-contain rounded-lg border-[6px] border-pink-200 shadow-2xl"
+                className="object-contain rounded-lg border-[6px] border-pink-300 shadow-2xl"
               />
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 text-white text-2xl font-bold"
+                className="absolute top-4 right-4 text-white text-3xl font-bold"
               >
                 &times;
               </button>

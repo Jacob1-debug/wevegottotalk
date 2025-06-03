@@ -26,13 +26,7 @@ export default function Home() {
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 1 }}
 				>
-				<Image
-					src="/images/decodded_image.png"
-					alt="Anna and Elisha together"
-					width={160}
-					height={160}
-					className="rounded-full object-cover"
-				/>
+				
 				</motion.div>
 
 

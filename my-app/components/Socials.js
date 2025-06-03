@@ -7,6 +7,7 @@ import {
 	FaTiktok,
 	FaSpotify,
 	FaFacebook,
+	FaEnvelope
 } from "react-icons/fa";
 
 const MediaSection = () => {
@@ -37,25 +38,30 @@ const MediaSection = () => {
 							Follow us on our socials
 						</p>
 
-						{/* Top Row: Instagram + TikTok */}
-						<div className="flex flex-wrap gap-6 md:gap-28 justify-between items-center">
-							<div className="flex items-center gap-4 bg-white px-6 py-3 rounded-full border border-gray-200 shadow-sm w-fit">
-								<a
-									href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4Mzc0OTcyNjE0MTA5MTU5?igsh=emI4OXd4bGt5c2Rn"
-									className="p-1 rounded-full hover:bg-pink-100 transition"
-									aria-label="Instagram"
-								>
-									<FaInstagram className="text-pink-600 text-2xl" />
-								</a>
-								<a
-									href="https://www.tiktok.com/@we.have.got.to.talk?_t=ZT-8v9HGjrPiL0&_r=1"
-									className="p-1 rounded-full hover:bg-gray-100 transition"
-									aria-label="TikTok"
-								>
-									<FaTiktok className="text-gray-800 text-2xl" />
-								</a>
-							</div>
+						<div className="flex flex-wrap gap-6 md:gap-10 justify-start items-center">
+							{/* Instagram */}
+							<a
+								href="https://www.instagram.com/..."
+								target="_blank"
+								rel="noreferrer"
+								className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-gray-200 shadow-sm w-fit hover:bg-pink-50 transition"
+								aria-label="Instagram"
+							>
+								<FaInstagram className="text-pink-600 text-2xl" />
+								<span className="hidden md:inline text-sm font-medium text-gray-800"></span>
+							</a>
 
+							{/* TikTok */}
+							<a
+								href="https://www.tiktok.com/..."
+								target="_blank"
+								rel="noreferrer"
+								className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-gray-200 shadow-sm w-fit hover:bg-gray-50 transition"
+								aria-label="TikTok"
+							>
+								<FaTiktok className="text-black text-2xl" />
+								<span className="hidden md:inline text-sm font-medium text-gray-800"></span>
+							</a>
 							{/* Twitter */}
 							<a
 								href="https://x.com/WeHaveGOTT9116"
@@ -80,6 +86,10 @@ const MediaSection = () => {
 								<FaFacebook className="text-blue-700 text-2xl" />
 							</a>
 						</div>
+
+      
+
+
 					</div>
 				</div>
 
